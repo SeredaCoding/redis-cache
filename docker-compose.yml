@@ -1,0 +1,16 @@
+services:
+  php:
+    build: ./php
+    container_name: php-redis
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
