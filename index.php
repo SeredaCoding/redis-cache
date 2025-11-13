@@ -1,9 +1,8 @@
 <?php
-
 require __DIR__ . '/vendor/autoload.php';
 
-$redis = new Redis();
-$redis->connect('redis', 6379); // o hostname 'redis' é o nome do serviço no docker-compose
+use Dell\RedisCache\Cache;
 
-$redis->set('mensagem', 'Olá do Redis via Docker!');
-echo "Valor armazenado: " . $redis->get('mensagem');
+$cache = new Cache();
+$cache->set('mensagem', 'Olá do Redis via Docker com PSR-4!');
+echo "Valor armazenado: " . $cache->get('mensagem');

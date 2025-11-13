@@ -1,6 +1,6 @@
 {
     "name": "dell/redis-cache",
-    "description": "N/a",
+    "description": "Exemplo prático de cache usando Redis com PHP e Docker",
     "type": "project",
     "autoload": {
         "psr-4": {
@@ -9,7 +9,7 @@
     },
     "authors": [
         {
-            "name": "Mateus Sereda",
+            "name": "Mateus Sereda"
         }
     ],
     "require": {}
